@@ -1,0 +1,30 @@
+title: Brandshield
+description: Defensive-only brand protection: CT signals → explainable risk alerts → takedown-ready audit packs. Public data only. No PII.
+url: ""        # optional, e.g. https://takovhs.github.io
+baseurl: ""    # for project pages you can set "/web3-brandshield-platform" if needed
+lang: ru-RU
+
+# Build
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# If GitHub Pages supports these plugins, they'll help SEO/sitemap. If build fails, remove these 2 lines.
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: /assets/og.png
+
+# UI bits
+brandshield:
+  cta_primary_text: "Запросить 72‑Hour Audit Pack"
+  cta_primary_url: "https://cal.com/vietcash/brandshield-kickoff"
+  cta_secondary_text: "Получить Free Exposure Snapshot"
+  cta_secondary_url: "https://tally.so/r/wPvpKa"
