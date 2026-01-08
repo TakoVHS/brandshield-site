@@ -1,0 +1,47 @@
+---
+layout: null
+permalink: /schema.json
+---
+
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/assets/og.png",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "Contact for pricing",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "email": "{{ site.author.email }}",
+    "url": "https://github.com/TakoVHS"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/og.png"
+    }
+  },
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "name": "{{ site.title }}",
+    "description": "{{ site.description }}",
+    "url": "{{ site.url }}",
+    "email": "{{ site.brandshield.contact_email }}",
+    "foundingDate": "2024",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Worldwide"
+    }
+  }
+}

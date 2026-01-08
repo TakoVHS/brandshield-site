@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  site:
+    image: jekyll/jekyll:4.3
+    working_dir: /srv/jekyll/docs
+    command: sh -c "bundle install && jekyll serve --watch --force_polling --livereload --host 0.0.0.0 --baseurl \"\""
+    environment:
+      - JEKYLL_ENV=development
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - .:/srv/jekyll:cached
+    restart: unless-stopped

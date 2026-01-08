@@ -32,7 +32,21 @@ defaults:
 
 # Analytics
 google_analytics:
-  id: "G-YOUR-GA-ID"
+  id: "G-XXXXXXXXXXXX"  # Заполнить Google Analytics ID
+
+# SEO & Structured Data
+seo:
+  organization:
+    name: "Brandshield"
+    url: "https://brandshield.dev"
+    logo: "https://brandshield.dev/assets/og.png"
+    description: "Defensive-only brand protection powered by public data intelligence"
+  
+  social:
+    - url: "https://github.com/TakoVHS"
+      type: "GitHub"
+    - url: "https://twitter.com/takovhs"
+      type: "Twitter"
 
 # UI bits
 brandshield:
@@ -42,3 +56,4 @@ brandshield:
   cta_secondary_url: "https://tally.so/r/wPvpKa"
   github_url: "https://github.com/TakoVHS/brandshield-site"
   contact_email: "contact@takovhs.dev"
+  twitter: "@takovhs"

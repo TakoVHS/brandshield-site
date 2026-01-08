@@ -1,0 +1,38 @@
+---
+layout: page
+title: "Sitemap"
+permalink: /sitemap.html
+description: "Complete sitemap of Brandshield website"
+robots: noindex
+---
+
+# Sitemap
+
+## Primary Pages
+
+- [Home]({{ site.baseurl }}/)
+- [Blog]({{ site.baseurl }}/blog)
+- [Contact]({{ site.baseurl }}/contact)
+
+## Blog Posts
+
+{% for post in site.posts %}
+- [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
+  - *Posted: {{ post.date | date: "%B %d, %Y" }}*
+  - Categories: {% for cat in post.categories %}{{ cat }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+{% endfor %}
+
+## Static Resources
+
+- [Sitemap (XML)]({{ site.baseurl }}/sitemap.xml)
+- [Feed (RSS)]({{ site.baseurl }}/feed.xml)
+- [Robots.txt]({{ site.baseurl }}/robots.txt)
+
+## Contact
+
+- [Contact Form]({{ site.baseurl }}/contact)
+- Email: [{{ site.brandshield.contact_email }}](mailto:{{ site.brandshield.contact_email }})
+
+---
+
+*This HTML sitemap provides a human-readable overview of all content. Search engines use the [XML sitemap](/sitemap.xml) for more detailed crawling information.*

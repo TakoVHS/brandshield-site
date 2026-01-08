@@ -26,6 +26,34 @@
 
     <link rel="icon" href="{{ site.baseurl }}/assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/theme.css" />
+    <script defer src="{{ site.baseurl }}/assets/performance.js"></script>
+    <script defer src="{{ site.baseurl }}/assets/theme-toggle.js"></script>
+
+    <!-- JSON-LD Schema -->
+    <link rel="alternate" type="application/ld+json" href="{{ site.baseurl }}/schema.json" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+      "description": "{{ page.description | default: site.description }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      "image": "{{ site.url }}{{ page.image | default: '/assets/og.png' }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/assets/og.png"
+        }
+      },
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author.name }}"
+      }
+    }
+    </script>
 
     {% if site.plugins contains "jekyll-seo-tag" %}
       {% seo %}
@@ -56,10 +84,12 @@
           <a href="{{ site.baseurl }}/snapshot">Snapshot</a>
           <a href="{{ site.baseurl }}/radar">Radar</a>
           <a href="{{ site.baseurl }}/compliance">Compliance</a>
+          <a href="{{ site.baseurl }}/blog">Blog</a>
           <a href="{{ site.baseurl }}/contact">Contact</a>
         </nav>
 
         <div class="topbar__cta">
+          <button class="theme-toggle" type="button" title="Toggle theme" data-action="toggle-theme">🌓 Theme</button>
           <a class="btn btn--ghost" href="{{ site.brandshield.cta_secondary_url }}">{{ site.brandshield.cta_secondary_text }}</a>
           <a class="btn" href="{{ site.brandshield.cta_primary_url }}">{{ site.brandshield.cta_primary_text }}</a>
         </div>
