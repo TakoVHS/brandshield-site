@@ -1,7 +1,7 @@
 title: Brandshield — Brand Abuse Early Warning
 description: Останавливайте имперсонацию и фишинговые домены до того, как пострадают пользователи. Defensive-only. Public data only. No PII.
-url: "https://takovhs.github.io"
-baseurl: "/brandshield-site"
+url: "https://brandshield.dev"
+baseurl: ""
 lang: ru-RU
 
 author:
