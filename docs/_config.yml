@@ -1,18 +1,26 @@
-title: Brandshield
-description: Defensive-only brand protection: CT signals → explainable risk alerts → takedown-ready audit packs. Public data only. No PII.
-url: ""        # optional, e.g. https://takovhs.github.io
-baseurl: ""    # for project pages you can set "/web3-brandshield-platform" if needed
+title: Brandshield — Brand Abuse Early Warning
+description: Останавливайте имперсонацию и фишинговые домены до того, как пострадают пользователи. Defensive-only. Public data only. No PII.
+url: "https://takovhs.github.io"
+baseurl: "/brandshield-site"
 lang: ru-RU
+
+author:
+  name: TakoVHS
+  email: contact@takovhs.dev
 
 # Build
 markdown: kramdown
 kramdown:
   input: GFM
+  hard_wrap: false
 
-# If GitHub Pages supports these plugins, they'll help SEO/sitemap. If build fails, remove these 2 lines.
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
+
+sass:
+  style: compressed
 
 # Defaults
 defaults:
@@ -22,9 +30,15 @@ defaults:
       layout: page
       image: /assets/og.png
 
+# Analytics
+google_analytics:
+  id: "G-YOUR-GA-ID"
+
 # UI bits
 brandshield:
   cta_primary_text: "Запросить 72‑Hour Audit Pack"
   cta_primary_url: "https://cal.com/vietcash/brandshield-kickoff"
   cta_secondary_text: "Получить Free Exposure Snapshot"
   cta_secondary_url: "https://tally.so/r/wPvpKa"
+  github_url: "https://github.com/TakoVHS/brandshield-site"
+  contact_email: "contact@takovhs.dev"
